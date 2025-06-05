@@ -28,4 +28,9 @@ io.on("connection", (socket) => {
 });
 
 
+app.get("/home", (req, res) => {
+    res.json({"prakash"});
+});
+
+
 httpServer.listen(3000, () => {});
