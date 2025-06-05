@@ -11,7 +11,7 @@
     }
   ],
   "routes": [
-    // Handle static assets first
+    
     {
       "src": "/assets/(.*)",
       "headers": {
@@ -19,7 +19,7 @@
       },
       "dest": "/assets/$1"
     },
-    // Fallback to index.html for SPA
+   
     {
       "src": "/(.*)",
       "dest": "/index.html",
