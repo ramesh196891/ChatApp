@@ -5,19 +5,14 @@
       "src": "client/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "client/dist"
+        "distDir": "dist"
       }
     }
   ],
   "routes": [
     {
-      "src": "/api/.*",
-      "dest": "https://chat-app-eight-omega-74.vercel.app/api"
-    },
-    {
       "src": "/(.*)",
-      "dest": "/client/dist/index.html",
-      "status": 200
+      "dest": "/client/dist/$1"
     }
   ]
 }
