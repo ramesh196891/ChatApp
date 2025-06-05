@@ -6,13 +6,13 @@ function App() {
   const [score, setScore] = useState({});
   const [scores, setScores] = useState([]);
 
-  const socket = io("https://chat-app-eight-omega-74.vercel.app");
+  // const socket = io("https://chat-app-eight-omega-74.vercel.app");
 
-  function connectSocket(){
-    socket.on("connection", (socket) => {
+  // function connectSocket(){
+  //   socket.on("connection", (socket) => {
       
-    });
-  }
+  //   });
+  // }
 
   function handleInput(event){
     let {name, value} = event.target;
@@ -21,16 +21,16 @@ function App() {
     setScore((prev) => ({...prev, ...currentObj}));
   }
 
-  function sendScore(){
-    socket.emit("scores", score);
+  // function sendScore(){
+  //   socket.emit("scores", score);
 
-    socket.on("playerScores", (playerScores) => {
-      setScores(playerScores);
-    });
-  }
+  //   socket.on("playerScores", (playerScores) => {
+  //     setScores(playerScores);
+  //   });
+  // }
 
   useEffect(() => {
-    connectSocket();
+    // connectSocket();
   }, []);
 
   return (
@@ -47,7 +47,7 @@ function App() {
           <button onClick={sendScore} className='p-2 border-2 border-emerald-500 hover:cursor-pointer'> Publish score</button>
         </div>
 
-        <div className="p-5">
+{/*         <div className="p-5">
           <table className="min-w-[500px] w-full shadow-md rounded-lg overflow-hidden">
             <thead className="bg-blue-600 text-white">
               <tr>
@@ -74,7 +74,7 @@ function App() {
               ))}
             </tbody>
           </table>
-        </div>
+        </div> */}
       </div>
     </>
   )
