@@ -28,7 +28,7 @@ io.on("connection", (socket) => {
 });
 
 
-app.get("/home", (req, res) => {
+app.get("/api/s", (req, res) => {
     res.json({"prakash"});
 });
 
