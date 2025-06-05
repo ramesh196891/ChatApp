@@ -6,7 +6,7 @@ function App() {
   const [score, setScore] = useState({});
   const [scores, setScores] = useState([]);
 
-  const socket = io("http://localhost:3000");
+  const socket = io("https://chat-app-eight-omega-74.vercel.app");
 
   function connectSocket(){
     socket.on("connection", (socket) => {
